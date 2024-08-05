@@ -1,6 +1,6 @@
 
 
-name: Hello World
+name: Run Tests
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version:16.18
+          node-version: 16.18
       - name: Install Dependencies
         run: npm ci
       - name: Run tests
