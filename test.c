@@ -1,7 +1,7 @@
 #include "add.c"
 
 int main(){
-    int sum = add(5,5); 
+    int sum = add(5,6); 
     if(sum == 10){
         printf("passed\n");
         return 0;
