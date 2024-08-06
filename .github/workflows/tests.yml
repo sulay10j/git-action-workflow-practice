@@ -1,0 +1,28 @@
+
+
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
+  
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Complie o file
+        run: gcc -std=c99 -Wall -c test.c
+      - name: Compile executable
+        run: gcc -std=c99 -Wall test.o
+      - name: run executable
+        run: ./test
+      - name: Clean Build
+        run: rm -f test
