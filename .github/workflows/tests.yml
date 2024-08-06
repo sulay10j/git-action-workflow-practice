@@ -18,11 +18,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.18
-      - name: Install Dependencies
-        run: npm ci
-      - name: Run tests
-        run: npm test
+      - name: Complie o file
+        run: gcc -std=c99 -Wall -c test.c
+      - name: Compile executable
+        run: gcc -std=c99 -Wall test.o
+      - name: run executable
+        run: ./test
+      - name: Clean Build
+        run: rm -f test

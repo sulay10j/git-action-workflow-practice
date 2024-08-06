@@ -3,10 +3,11 @@
 int main(){
     int sum = add(5,5); 
     if(sum == 10){
-        print("passed\n");
+        printf("passed\n");
         return 0;
     }else{
-        print("failed\n");
+        printf("failed\n");
         return -1;
 }
+return 0;
 }
