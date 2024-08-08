@@ -1,4 +1,4 @@
-name: cpp-linter
+name: Cpp-linter
 
 on:
   push:
